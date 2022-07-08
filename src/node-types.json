@@ -1,6 +1,6 @@
 [
   {
-    "type": "module_decl",
+    "type": "declarations",
     "named": true,
     "fields": {},
     "children": {
@@ -8,30 +8,95 @@
       "required": true,
       "types": [
         {
-          "type": "declaration",
+          "type": "function",
           "named": true
         },
         {
-          "type": "module_name_identifier",
+          "type": "signature",
           "named": true
         }
       ]
     }
   },
   {
+    "type": "function",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "lower_identifier",
+            "named": true
+          }
+        ]
+      },
+      "rhs": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "char",
+            "named": true
+          },
+          {
+            "type": "float",
+            "named": true
+          },
+          {
+            "type": "integer",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "program",
     "named": true,
-    "fields": {},
+    "fields": {
+      "module_name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "module_name_identifier",
+            "named": true
+          }
+        ]
+      }
+    },
     "children": {
       "multiple": false,
       "required": true,
       "types": [
         {
-          "type": "module_decl",
+          "type": "declarations",
           "named": true
         }
       ]
     }
+  },
+  {
+    "type": "signature",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "lower_identifier",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
+    "type": ":",
+    "named": false
   },
   {
     "type": ";",
@@ -42,11 +107,27 @@
     "named": false
   },
   {
+    "type": "UNDEFINED",
+    "named": false
+  },
+  {
+    "type": "char",
+    "named": true
+  },
+  {
     "type": "comment",
     "named": true
   },
   {
-    "type": "declaration",
+    "type": "float",
+    "named": true
+  },
+  {
+    "type": "integer",
+    "named": true
+  },
+  {
+    "type": "lower_identifier",
     "named": true
   },
   {
